@@ -1,0 +1,342 @@
+fileFormatVersion: 2
+guid: 2bd93a15adc4f4842a75238a7fd5d482
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: attack_nail_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 85
+        height: 160
+      alignment: 9
+      pivot: {x: 0.49999985, y: 0.017077822}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410f97ade8d295042b8081d93ab756ce
+      internalID: -965381293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_1
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 5
+        width: 122
+        height: 161
+      alignment: 9
+      pivot: {x: 0.50801665, y: -0.0042226627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae359f1926437594b886a98f75f72955
+      internalID: -928859304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 9
+        width: 92
+        height: 144
+      alignment: 9
+      pivot: {x: 0.5, y: 0.020553749}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9148a688fd0aa54db2cc3f8d4fb5100
+      internalID: 776067261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 6
+        width: 92
+        height: 143
+      alignment: 9
+      pivot: {x: 0.48936895, y: -0.0061342465}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06039c38993ef4b8b3afbda308fe39
+      internalID: 1719892401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_4
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 8
+        width: 131
+        height: 158
+      alignment: 9
+      pivot: {x: 0.50746584, y: 0.004774619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819df328bfd68a745913a171cead4222
+      internalID: -1848846938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_5
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 8
+        width: 90
+        height: 140
+      alignment: 9
+      pivot: {x: 0.47826505, y: -0.0022523873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775b598f54dd3b94b93b73ad4d72ede0
+      internalID: 1148967005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_6
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 8
+        width: 129
+        height: 158
+      alignment: 9
+      pivot: {x: 0.48632088, y: 0.016856894}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1583945cd7d814a9f9aefc7329172a
+      internalID: -1011009811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_7
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 6
+        width: 132
+        height: 160
+      alignment: 9
+      pivot: {x: 0.47777072, y: -0.0012609959}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce26d368fa07de4db3682775729e008
+      internalID: 641192175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_8
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 6
+        width: 130
+        height: 160
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0048519433}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0d43c871dd5f24c8983b678fb36622
+      internalID: -427496681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_nail_9
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 4
+        width: 122
+        height: 161
+      alignment: 9
+      pivot: {x: 0.50801665, y: -0.0042226627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c773c03961c345a4780a6cd60f7658b4
+      internalID: 50166113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      attack_nail_1: -928859304
+      attack_nail_0: -965381293
+      attack_nail_3: 1719892401
+      attack_nail_9: 50166113
+      attack_nail_2: 776067261
+      attack_nail_6: -1011009811
+      attack_nail_5: 1148967005
+      attack_nail_8: -427496681
+      attack_nail_4: -1848846938
+      attack_nail_7: 641192175
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

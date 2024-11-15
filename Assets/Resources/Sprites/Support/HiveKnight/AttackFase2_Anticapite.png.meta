@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 7a46f69c25b1b8d48aa09dc70436eb5b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 45
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 359
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0b5b8ce03621843a013d6c2633f08d
+      internalID: -1800256720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_1
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 246
+        width: 160
+        height: 117
+      alignment: 9
+      pivot: {x: 0.28084016, y: 0.013110352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41d9f6d1d4132f409e2a6a8e14aea99
+      internalID: -1344916443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 122
+        width: 168
+        height: 96
+      alignment: 9
+      pivot: {x: 0.29231614, y: 0.007949114}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747b8cb3079b58d47a60fadc0e68b0e7
+      internalID: -297914296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 115
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2e8c5c73042d149a9909811429a755
+      internalID: -963223359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_4
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 118
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db70d509ad7837148a5d5de157342a13
+      internalID: 1328721526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 117
+        width: 11
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73ab681340020b4eb142edc9dbfe551
+      internalID: -2119751259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 149
+        height: 90
+      alignment: 9
+      pivot: {x: 0.28024322, y: 0.01093119}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6f5c66308159694d9e581c72e276612
+      internalID: 1037450282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_7
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 0
+        width: 127
+        height: 80
+      alignment: 9
+      pivot: {x: 0.30557457, y: -0.016653512}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c7903d41c9e404b86748be8163504f
+      internalID: 1902250818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_8
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 247
+        width: 166
+        height: 116
+      alignment: 9
+      pivot: {x: 0.28084016, y: 0.013110352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e76c2c65ee6e8499a824cb4bc430f9
+      internalID: -569976459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 246
+        width: 168
+        height: 114
+      alignment: 9
+      pivot: {x: 0.28084016, y: 0.013110352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0311d4f6ebe5a4ebe2129f3aa4811b
+      internalID: 1609190684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_10
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 245
+        width: 168
+        height: 114
+      alignment: 9
+      pivot: {x: 0.28084016, y: 0.013110352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df4b5719c45fd742953ac56fe06b102
+      internalID: -1718585206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_11
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 123
+        width: 163
+        height: 101
+      alignment: 9
+      pivot: {x: 0.28084016, y: 0.013110352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61082aa6a9e612549925bf0ac6cd8a35
+      internalID: 724741029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_12
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 121
+        width: 163
+        height: 105
+      alignment: 9
+      pivot: {x: 0.25778797, y: 0.007998222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf401d00a5530264f93f9a8838ab069e
+      internalID: -555236594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackFase2_Anticapite_13
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 121
+        width: 160
+        height: 111
+      alignment: 9
+      pivot: {x: 0.25735587, y: 0.013110462}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111d518266e5a704f85792ed98ba9cc6
+      internalID: -1534665031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AttackFase2_Anticapite_6: 1037450282
+      AttackFase2_Anticapite_3: -963223359
+      AttackFase2_Anticapite_5: -2119751259
+      AttackFase2_Anticapite_9: 1609190684
+      AttackFase2_Anticapite_0: -1800256720
+      AttackFase2_Anticapite_11: 724741029
+      AttackFase2_Anticapite_12: -555236594
+      AttackFase2_Anticapite_4: 1328721526
+      AttackFase2_Anticapite_2: -297914296
+      AttackFase2_Anticapite_1: -1344916443
+      AttackFase2_Anticapite_10: -1718585206
+      AttackFase2_Anticapite_8: -569976459
+      AttackFase2_Anticapite_13: -1534665031
+      AttackFase2_Anticapite_7: 1902250818
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
