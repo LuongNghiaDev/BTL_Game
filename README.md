@@ -1,8 +1,19 @@
-# Bài tập lớn môn thiết kế và phát triển trò chơi
 
-- Đây là bài tập lớn của nhóm 2MN bộ môn thiết kế và phát triển trò chơi ngành Công nghệ Thông tin, 
-Trường ĐH Thủy Lợi. Khóa học diễn ra vào học kỳ 2, năm học 2024-2025.
+# DARK HERO
 
-# Giới thiệu
-- Tên dự án: Game Đánh Nhau Trong Rừng Rậm
-- Thành viên trong nhóm 2MN
+***Dark Hero*** là một trò chơi thuộc thể loại [*Metrovania*](https://en.wikipedia.org/wiki/Metroidvania) được viết dựa trên C# kết hợp Unity để làm bài tập lớn cho môn Game K63-TLU.
+
+## Giới thiệu
+- Nhóm 10 lớp 63CNTT.VA-NB: 2MN
+- Nhóm gồm 4 thành viên:
+
+![Ảnh thành viên nhóm](/DocsAndAnotherAssets/MembersOfTeam.png)
+
+## High Concept
+> **JellyCat tiêu diệt quái vật trong rừng rậm hắc ám**
+
+![Ảnh minh họa](/DocsAndAnotherAssets/HighConceptPic02.jpg)
+![Ảnh minh họa](/DocsAndAnotherAssets/HighConceptPic01.jpg)
+
+
+
