@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 2909313191500955913}
   - component: {fileID: 7342067441345191918}
   - component: {fileID: 5330045680803933681}
-  - component: {fileID: 6328757455754415716}
   m_Layer: 13
   m_Name: FuriousVengefly
   m_TagString: Enemy
@@ -319,7 +318,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -330,7 +329,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!70 &4957019731279943786
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -477,21 +476,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7afe9b052cb71fe49adef3f687dce8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!111 &6328757455754415716
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6353408105586047310}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 6b44af55b3dc56648bb893f0b5e874c4, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  activeDistance: 10
+  evadeRange: 9000
+  takeDamageForce: 0
+  airDeathInterval: 0.2
+  landDeathInterval: 1
+  shotPoint: {fileID: 6117591553707249044}
+  projectile: {fileID: 0}
 --- !u!1 &6930262288061719203
 GameObject:
   m_ObjectHideFlags: 0

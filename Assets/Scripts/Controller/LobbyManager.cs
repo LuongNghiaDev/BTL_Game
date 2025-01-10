@@ -25,6 +25,7 @@ public partial class LobbyManager : SerializedMonoBehaviour
     }
     public PlayerDataManager PlayerDataManager => PlayerDataManager.Instance;
     public Profile Profile { get; private set; }
+    public int indexMap = 1;
 
     private void Awake()
     {

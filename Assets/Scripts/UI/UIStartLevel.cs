@@ -23,19 +23,19 @@ public class UIStartLevel : UICanvas
 
     private void OnClickBtnStart1()
     {
-        SceneManager.LoadScene("QueenGarden");
+        SceneManager.LoadScene(1);
         OnBackPressed();
     }
 
     private void OnClickBtnStart2()
     {
-        SceneManager.LoadScene("Grimm");
+        //SceneManager.LoadScene("Grimm");
         OnBackPressed();
     }
 
     private void OnClickBtnStart3()
     {
-        SceneManager.LoadScene("GodTamer");
+        //SceneManager.LoadScene("GodTamer");
         OnBackPressed();
     }
 
