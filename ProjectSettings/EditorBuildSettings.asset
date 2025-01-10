@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Lobby.unity
     guid: 028f712f32ca6cb498ecdfb2ba43a311
   - enabled: 1
-    path: Assets/Scenes/QueenGarden.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Map_Luong_Nghia.unity
+    guid: 1ceb8271858a89447a45e924642aa51f
   - enabled: 1
-    path: Assets/Scenes/Grimm.unity
-    guid: 928b3f469c4c561469e85f5dd340b8ee
+    path: Assets/Scenes/Map_TienManh.unity
+    guid: 7b1031cc729ab0941b6f27e4ee7c71eb
   - enabled: 1
-    path: Assets/Scenes/GodTamer.unity
-    guid: 4935882453d708b419f9bab243060b74
+    path: Assets/Scenes/GodTamerDTN.unity
+    guid: db74a08fd89847b43b7342f69dc97720
+  - enabled: 1
+    path: Assets/Scenes/Scene_TranMinh.unity
+    guid: 9f0186c6bbca4e846b64df72ee355baa
   m_configObjects: {}
