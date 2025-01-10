@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a3d69f14d506e284dabea7759935312c
+guid: 78af5a753159a5448b49ec5cbdae1554
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -65,7 +65,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: atlas0 #15305_0
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 270
-        width: 110
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df740fe5967122649b6291ab28754644
-      internalID: 744589367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atlas0 #15305_1
-      rect:
-        serializedVersion: 2
-        x: 116
-        y: 198
-        width: 65
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dae427cff2f8c7149a739ff66a45d7a3
-      internalID: 890099197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atlas0 #15305_2
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 112
-        width: 292
-        height: 195
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f192a7df9b07d17479b62835b5a0c497
-      internalID: 1002341226
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atlas0 #15305_3
-      rect:
-        serializedVersion: 2
-        x: 375
-        y: 305
-        width: 116
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16c4dc9baafb88b40a98a00703d22c54
-      internalID: -490212785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atlas0 #15305_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 506
-        height: 196
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22a78d5aa4920174d92bc9d1e985fe56
-      internalID: -1379707433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: atlas0 #15305_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 195
-        width: 116
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b86e7e62602cae459fa3242b0889eee
-      internalID: -1559828611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      atlas0 #15305_0: 744589367
-      atlas0 #15305_1: 890099197
-      atlas0 #15305_2: 1002341226
-      atlas0 #15305_3: -490212785
-      atlas0 #15305_4: -1379707433
-      atlas0 #15305_5: -1559828611
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
