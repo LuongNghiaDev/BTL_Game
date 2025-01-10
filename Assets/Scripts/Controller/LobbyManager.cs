@@ -34,8 +34,8 @@ public partial class LobbyManager : SerializedMonoBehaviour
         }
         Profile = new Profile();
 
-        dataLevel = PlayerDataManager.GetDataLevel(levelConstraint);
-        dataLevel.LevelConstraint = levelConstraint;
+        /*dataLevel = PlayerDataManager.GetDataLevel(levelConstraint);
+        dataLevel.LevelConstraint = levelConstraint;*/
         Debug.Log(dataLevel);
     }
 
