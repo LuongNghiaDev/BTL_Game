@@ -56,7 +56,9 @@ public partial class Character : MonoBehaviour
         healthController = GetComponent<HealthController>();
         //audioManager = FindObjectOfType<AudioManager>();
         audioManager = GetComponent<AudioManager>();
-        
+
+        isClimb = false;
+        isGround = true;
         isSphereable = true;
         isHealable = true;
         isDeath = false;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public partial class Character : IMovement
@@ -75,12 +76,15 @@ public partial class Character : IMovement
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) && isInputable)
         {
+            UnityEngine.Debug.Log("Jump with up arrow");
             if (isClimb)
             {
+                UnityEngine.Debug.Log("Jump in Climb");
                 StartCoroutine(climbJumpCoroutine());
             }
             else if (isGround)
             {
+                UnityEngine.Debug.Log("Jump in Ground");
                 StartCoroutine(jumpCoroutine());
             }
         }
@@ -89,6 +93,7 @@ public partial class Character : IMovement
         {
             if (Input.GetKeyUp(KeyCode.W))
             {
+                UnityEngine.Debug.Log("Jump");
                 isJumping = false;
             }
         }
