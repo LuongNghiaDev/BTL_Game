@@ -260,7 +260,6 @@ MonoBehaviour:
   isDestroyWhenClosed: 0
   isDisableWhenClosed: 1
   isAutoSetSortingLayer: 1
-  btnExit: {fileID: 1476667291}
 --- !u!114 &14570938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19934,6 +19933,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  isBoss: 0
+  audioManager: {fileID: 0}
 --- !u!50 &823707103
 Rigidbody2D:
   serializedVersion: 4
@@ -34424,10 +34425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeDistance: 0
   openMusicAttack: 0
-  attackDashRange: 0
-  attackDashVelocity: 0
-  attackRange: 0
-  isJump: 0
+  isJumping: 1
   rb: {fileID: 0}
   jumpHeight: 0
 --- !u!111 &1690451066
@@ -34459,6 +34457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centreGravity: {fileID: 1892253418}
   recoilForce: 5000
+  isBoss: 0
 --- !u!114 &1690451068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34598,6 +34597,7 @@ MonoBehaviour:
   landDeathInterval: 1
   shotPoint: {fileID: 0}
   projectile: {fileID: 778058487976747190, guid: 9a2ae68ea42e24c458bd9eb6a03ba850, type: 3}
+  isBoss: 0
 --- !u!50 &1690451071
 Rigidbody2D:
   serializedVersion: 4
@@ -34638,6 +34638,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 15
+  isBoss: 0
+  audioManager: {fileID: 0}
 --- !u!95 &1690451073
 Animator:
   serializedVersion: 5
@@ -42188,7 +42190,7 @@ Transform:
   m_GameObject: {fileID: 1994924756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 678.45844, y: 276.87015, z: -10}
+  m_LocalPosition: {x: 678.45703, y: 276.95926, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42449,7 +42451,7 @@ Transform:
   m_GameObject: {fileID: 2007674105}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0015869141, y: -0.10015869, z: 0}
+  m_LocalPosition: {x: 0.0029907227, y: -0.18927002, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43197,6 +43199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 15
+  isBoss: 0
+  audioManager: {fileID: 0}
 --- !u!50 &2875964160940027753
 Rigidbody2D:
   serializedVersion: 4
@@ -43233,7 +43237,7 @@ Transform:
   m_GameObject: {fileID: 2875964160940027750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.5, y: 10.26, z: 0}
+  m_LocalPosition: {x: 81.5, y: 10.23, z: 0}
   m_LocalScale: {x: -1.8138, y: 1.8138, z: 1.8138}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43375,6 +43379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centreGravity: {fileID: 3260350583576942017}
   recoilForce: 5000
+  isBoss: 0
 --- !u!1 &3260350583576942016
 GameObject:
   m_ObjectHideFlags: 0
@@ -43451,6 +43456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centreGravity: {fileID: 4257317056674376009}
   recoilForce: 5000
+  isBoss: 0
 --- !u!70 &8051861578161655825
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -43600,6 +43606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 15
+  isBoss: 0
+  audioManager: {fileID: 0}
 --- !u!50 &8051861578161655831
 Rigidbody2D:
   serializedVersion: 4
@@ -43818,6 +43826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centreGravity: {fileID: 8305068815485310519}
   recoilForce: 5000
+  isBoss: 0
 --- !u!111 &8305068814864483776
 Animation:
   m_ObjectHideFlags: 0
@@ -43847,10 +43856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeDistance: 5
   openMusicAttack: 0
-  attackDashRange: 0
-  attackDashVelocity: 0
-  attackRange: 0
-  isJump: 1
+  isJumping: 1
   rb: {fileID: 0}
   jumpHeight: 5
 --- !u!1 &8305068815485310518
@@ -44122,6 +44128,7 @@ MonoBehaviour:
   landDeathInterval: 1
   shotPoint: {fileID: 0}
   projectile: {fileID: 778058487976747190, guid: 9a2ae68ea42e24c458bd9eb6a03ba850, type: 3}
+  isBoss: 0
 --- !u!4 &8761724125777489053
 Transform:
   m_ObjectHideFlags: 0
@@ -44152,6 +44159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 15
+  isBoss: 0
+  audioManager: {fileID: 0}
 --- !u!50 &8761724125777489055
 Rigidbody2D:
   serializedVersion: 4

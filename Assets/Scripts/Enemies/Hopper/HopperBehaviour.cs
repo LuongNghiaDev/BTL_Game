@@ -9,8 +9,9 @@ public class HopperBehaviour : StateMachineBehaviour
     private Transform playerTransform;
     private Rigidbody2D HopperRigidbody;
     private HopperController hopperController;
-    private float evadeActiveRange = 5;
-    private float runSpeed = 3;
+    [SerializeField] private float attackRange = 5;
+    [SerializeField] private float runSpeed = 3;
+    private bool isActive = false;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -26,14 +27,19 @@ public class HopperBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(playerTransform.position, HopperTransform.position) < evadeActiveRange)
+        animator.SetTrigger("Jump");
+        if (Vector2.Distance(playerTransform.position, HopperTransform.position) < attackRange && !isActive)
         {
-            // animator.Play("Evade");
+            isActive = true;
         }
         else
         {
+            if (!isActive)
+            {
+                return;
+            }
             hopperController.Jump();
-            if(!hopperController.IsJump)
+            if (!hopperController.IsJumping)
             {
                 moveToPlayerPosition();
             }

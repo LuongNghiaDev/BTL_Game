@@ -14,21 +14,6 @@ public class FalseKnightController : BaseEnemy
         DeathControl();
     }
 
-    #region event region
-    //public void teleportOutEvent()
-    //{
-    //    int randSkill = Random.Range(0, 2);
-
-    //    if (randSkill == 0)
-    //    {
-    //        stompControl();
-    //    }
-    //    else
-    //    {
-    //        castControl();
-    //    }
-    //}
-
     //attack slash section
     public void attackDashEvent()
     {
@@ -37,24 +22,4 @@ public class FalseKnightController : BaseEnemy
             attackDashVelocity * Time.fixedDeltaTime);
         objRigidbody.MovePosition(newPosition);
     }
-
-    //// cast section
-    //private void castControl()
-    //{
-    //    animator.SetTrigger("Cast1");
-    //}
-
-    //public void castOrbEvent()
-    //{
-    //    // create an instance of orb
-    //    Instantiate(orb, castPoint.position, castPoint.rotation);
-    //}
-
-    //public void castOrbEvent1()
-    //{
-    //    // create an instance of orb
-    //    Instantiate(orb, castPoint2.position, castPoint2.rotation);
-    //}
-
-    #endregion
 }
