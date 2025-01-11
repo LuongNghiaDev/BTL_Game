@@ -10,14 +10,27 @@ public class HandleChangeScene : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            LobbyManager.Ins.indexMap++;
-            if(SceneManager.sceneCountInBuildSettings 
-               > LobbyManager.Ins.indexMap)
+            LobbyManager.Ins.SetIndexMap();
+            if(SceneManager.sceneCountInBuildSettings
+               <= LobbyManager.Ins.GetIndexMap())
             {
-                LobbyManager.Ins.indexMap = 1;
-                SceneManager.LoadScene(0);
+                StartCoroutine(LoadSceneAsync(0));
+            } else
+            {
+                StartCoroutine(LoadSceneAsync(LobbyManager.Ins.GetIndexMap()));
             }
-            SceneManager.LoadScene(LobbyManager.Ins.indexMap);
         }
+    }
+
+    IEnumerator LoadSceneAsync(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while (!operation.isDone)
+        {
+            yield return null;
+        }
+
+        gameObject.SetActive(false);
     }
 }

@@ -26,7 +26,7 @@ public partial class LobbyManager : SerializedMonoBehaviour
     }
     public PlayerDataManager PlayerDataManager => PlayerDataManager.Instance;
     public Profile Profile { get; private set; }
-    public int indexMap = 1;
+//    public int indexMap = 1;
 
     public Action OnActiveMainChangeScene;
 
@@ -41,6 +41,17 @@ public partial class LobbyManager : SerializedMonoBehaviour
         /*dataLevel = PlayerDataManager.GetDataLevel(levelConstraint);
         dataLevel.LevelConstraint = levelConstraint;*/
         Debug.Log(dataLevel);
+    }
+
+    public int GetIndexMap()
+    {
+        return PlayerPrefs.GetInt("IndexMap", 1);
+    }
+
+    public void SetIndexMap()
+    {
+        int indexMap = GetIndexMap() + 1;
+        PlayerPrefs.SetInt("IndexMap", indexMap);
     }
 
     private void Start()
