@@ -95,6 +95,7 @@ public class MossKnightController : MonoBehaviour
         objRigidbody.gravityScale = gravityScale;
     }
 
+    public bool isBoss = false;
     public void DeathControl()
     {
         if (healthController.getHealthPoint() <= 0 && !isDeath)
@@ -104,6 +105,10 @@ public class MossKnightController : MonoBehaviour
             MusicController musicController = FindObjectOfType<MusicController>();
             musicController.fightEndCoroutine();
             isDeath = true;
+            if(isBoss)
+            {
+                LobbyManager.Ins.OnActiveMainChangeScene?.Invoke();
+            }
         }
     }
 

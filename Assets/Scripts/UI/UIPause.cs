@@ -8,18 +8,20 @@ using UnityEngine.UI;
 public class UIPause : UICanvas
 {
 
-    [Title("Button")]
-    [SerializeField] private Button btnExit;
 
     private void Start()
     {
-        btnExit.onClick.AddListener(OnClickBtnExit);
     }
 
-    private void OnClickBtnExit()
+    public void OnClickBackHome()
     {
-        SceneManager.LoadScene("Lobby");
-        OnBackPressed();
+        GUIManager.Instance.OpenHome();
+        OnClose();
+    }
+
+    public void OnClose()
+    {
+        gameObject.SetActive(false);
     }
 
     public override void Show(bool _isShown, bool isHideMain = true)

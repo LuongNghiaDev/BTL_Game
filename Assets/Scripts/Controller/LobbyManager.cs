@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System;
 using UnityEngine;
 
 public partial class LobbyManager : SerializedMonoBehaviour
@@ -26,6 +27,8 @@ public partial class LobbyManager : SerializedMonoBehaviour
     public PlayerDataManager PlayerDataManager => PlayerDataManager.Instance;
     public Profile Profile { get; private set; }
     public int indexMap = 1;
+
+    public Action OnActiveMainChangeScene;
 
     private void Awake()
     {

@@ -8,35 +8,9 @@ using UnityEngine.UI;
 public class UIStartLevel : UICanvas
 {
 
-    [Title("Button")]
-    [SerializeField] private Button btn1;
-    [SerializeField] private Button btn2;
-    [SerializeField] private Button btn3;
-    //[SerializeField] private GameObject ;
-
-    private void Start()
+    public void OpenMap(int indexScene)
     {
-        btn1.onClick.AddListener(OnClickBtnStart1);
-        btn2.onClick.AddListener(OnClickBtnStart2);
-        btn3.onClick.AddListener(OnClickBtnStart3);
-    }
-
-    private void OnClickBtnStart1()
-    {
-        SceneManager.LoadScene(1);
-        OnBackPressed();
-    }
-
-    private void OnClickBtnStart2()
-    {
-        //SceneManager.LoadScene("Grimm");
-        OnBackPressed();
-    }
-
-    private void OnClickBtnStart3()
-    {
-        //SceneManager.LoadScene("GodTamer");
-        OnBackPressed();
+        SceneManager.LoadScene(indexScene);
     }
 
     public override void Show(bool _isShown, bool isHideMain = true)

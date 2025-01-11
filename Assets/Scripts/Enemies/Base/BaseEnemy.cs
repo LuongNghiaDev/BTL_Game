@@ -88,14 +88,19 @@ public class BaseEnemy : MonoBehaviour
         if (healthController.getHealthPoint() <= 0 && !isDeath)
         {
             animator.SetTrigger("Death");
-
-            if(openMusicAttack == true)
+            OnDie();
+            if (openMusicAttack == true)
             {
                 MusicController musicController = FindObjectOfType<MusicController>();
                 musicController.fightEndCoroutine();
             }
             isDeath = true;
         }
+    }
+
+    public virtual void OnDie()
+    {
+
     }
 
     public void destroyGameObject()

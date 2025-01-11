@@ -7,7 +7,7 @@ public class UIGamePlay : UICanvas
     [SerializeField]
     private UIPause uIPause;
 
-    private void Update()
+    /*private void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
@@ -17,5 +17,15 @@ public class UIGamePlay : UICanvas
         {
             uIPause.Show(false);
         }
+    }*/
+
+    public void OpenAllMap()
+    {
+        GUIManager.Instance.ActiveUIAllMap(true);
+    }
+
+    public void OpenUiSetting()
+    {
+        GUIManager.Instance.ActiveUISetting(true);
     }
 }

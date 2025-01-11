@@ -20,6 +20,7 @@ public class GrimmController : BaseEnemy
     [SerializeField] Transform castPoint;
     [SerializeField] Transform castPoint2;
     [SerializeField] GameObject orb;
+    public bool isBoss;
 
     private void Update()
     {
@@ -40,6 +41,11 @@ public class GrimmController : BaseEnemy
         {
             castControl();
         }
+    }
+
+    public override void OnDie()
+    {
+        base.OnDie();
     }
 
     //attack slash section

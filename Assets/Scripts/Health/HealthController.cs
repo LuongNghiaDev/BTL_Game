@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
     [SerializeField] int maxHealthPoint;
 
     private int healthPoint;
+    public bool isBoss;
 
     private void Start()
     {
@@ -16,6 +17,14 @@ public class HealthController : MonoBehaviour
     public void takeDamage(int damage)
     {
         healthPoint = Mathf.Max(0, healthPoint-damage);
+        if(healthPoint == 0)
+        {
+            if (isBoss)
+            {
+                Debug.Log("Change Scene");
+                LobbyManager.Ins.OnActiveMainChangeScene?.Invoke();
+            }
+        }
     }
 
     public void healing(int healthRecover)

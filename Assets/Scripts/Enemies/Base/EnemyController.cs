@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour
 
     private Rigidbody2D enemyRigidbody;
     private HealthController healthController;
+    public bool isBoss = false;
 
     private void Start()
     {
