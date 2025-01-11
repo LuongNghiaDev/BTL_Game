@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UISelectMap : MonoBehaviour
+public class UISelectMap : UICanvas
 {
     [SerializeField]
     private List<GameObject> lockMap;

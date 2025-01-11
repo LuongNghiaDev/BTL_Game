@@ -34,6 +34,8 @@ public partial class LobbyManager
     private int minLevel;
     private int maxLevel;
 
+    public GameObject main;
+
     private int GetForcedBuildIndex(int buildIndex)
     {
         if (levelLoadType != LevelLoadType.Normal)

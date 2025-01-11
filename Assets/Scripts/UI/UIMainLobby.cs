@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using System.Collections;
 //using System.Runtime.Hosting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,7 @@ public class UIMainLobby : UICanvas
 
     [Title("Text")]
     [SerializeField] private Button btnStart;
-    [SerializeField] private UIStartLevel uIStartLevel;
+    [SerializeField] private UISelectMap uiSelectMap;
     [SerializeField] private Button btnSetting;
     [SerializeField] private UISetting uISetting;
     [SerializeField] private Button btnInfo;
@@ -33,9 +34,22 @@ public class UIMainLobby : UICanvas
 
     private void OnClickBtnStart()
     {
-        uIStartLevel.Show(true);
-        btnBack.gameObject.SetActive(true);
+        uiSelectMap.gameObject.SetActive(true);
+        /*uIStartLevel.Show(true);
+        btnBack.gameObject.SetActive(true);*/
     }
+
+/*    IEnumerator LoadSceneAsync(int sceneIndex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+
+        while (!operation.isDone)
+        {
+            yield return null;
+        }
+
+        gameObject.SetActive(false);
+    }*/
 
     private void OnClickBtnSetting()
     {
@@ -51,7 +65,7 @@ public class UIMainLobby : UICanvas
 
     private void OnClickBtnBack()
     {
-        uIStartLevel.Show(false);
+        uiSelectMap.Show(false);
         uISetting.Show(false);
         uIInfo.Show(false);
         btnBack.gameObject.SetActive(false);

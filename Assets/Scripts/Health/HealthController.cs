@@ -8,6 +8,8 @@ public class HealthController : MonoBehaviour
 
     private int healthPoint;
     public bool isBoss;
+    [SerializeField]
+    private AudioManager audioManager;
 
     private void Start()
     {
@@ -21,8 +23,8 @@ public class HealthController : MonoBehaviour
         {
             if (isBoss)
             {
-                Debug.Log("Change Scene");
-                LobbyManager.Ins.OnActiveMainChangeScene?.Invoke();
+                audioManager.playSound("Die");
+                LobbyManager.Ins.main.SetActive(true);
             }
         }
     }

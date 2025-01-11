@@ -1303,6 +1303,13 @@ MonoBehaviour:
   isAutoSetSortingLayer: 1
   btnStart: {fileID: 7645794228004098040}
   uIStartLevel: {fileID: 0}
+  btnSetting: {fileID: 0}
+  uISetting: {fileID: 0}
+  btnInfo: {fileID: 0}
+  uIInfo: {fileID: 0}
+  btnQuit: {fileID: 0}
+  btnBack: {fileID: 0}
+  uiElements: []
 --- !u!1 &3224768550660822839
 GameObject:
   m_ObjectHideFlags: 0

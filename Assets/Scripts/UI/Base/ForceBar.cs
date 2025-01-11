@@ -3,7 +3,7 @@ using DG.Tweening;
 
 public class ForceBar : MonoBehaviour
 {
-    public DOTweenAnimation handleAnimation;
+    //public DOTweenAnimation handleAnimation;
     public RectTransform handle;
     public float MaxPosition;
     public float MinPosition;
@@ -13,7 +13,7 @@ public class ForceBar : MonoBehaviour
 
     public void StopRunning()
     {
-        handleAnimation.DOPause();
+        //handleAnimation.DOPause();
     }
 
     public int GetValue()
