@@ -34382,7 +34382,6 @@ GameObject:
   - component: {fileID: 1690451073}
   - component: {fileID: 1690451072}
   - component: {fileID: 1690451071}
-  - component: {fileID: 1690451070}
   - component: {fileID: 1690451069}
   - component: {fileID: 1690451068}
   - component: {fileID: 1690451067}
@@ -34394,7 +34393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1690451064
 Transform:
   m_ObjectHideFlags: 0
@@ -34404,7 +34403,7 @@ Transform:
   m_GameObject: {fileID: 1690451063}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 101.7, y: 10.15, z: 0}
+  m_LocalPosition: {x: 115.16, y: 10.7, z: 0}
   m_LocalScale: {x: -1.8138, y: 1.8138, z: 1.8138}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -34578,26 +34577,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0015479199, y: 0.037368808}
   m_Size: {x: 1.0465285, y: 2.1837785}
   m_Direction: 0
---- !u!114 &1690451070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690451063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e685258783025241a7871405d7bc246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeDistance: 3
-  evadeRange: 9000
-  takeDamageForce: 0
-  airDeathInterval: 0.2
-  landDeathInterval: 1
-  shotPoint: {fileID: 0}
-  projectile: {fileID: 778058487976747190, guid: 9a2ae68ea42e24c458bd9eb6a03ba850, type: 3}
-  isBoss: 0
 --- !u!50 &1690451071
 Rigidbody2D:
   serializedVersion: 4
@@ -42190,7 +42169,7 @@ Transform:
   m_GameObject: {fileID: 1994924756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 678.45703, y: 276.95926, z: -10}
+  m_LocalPosition: {x: 678.4564, y: 276.99835, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42451,7 +42430,7 @@ Transform:
   m_GameObject: {fileID: 2007674105}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0029907227, y: -0.18927002, z: 0}
+  m_LocalPosition: {x: 0.0036010742, y: -0.22836304, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43185,7 +43164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2875964160940027752
 MonoBehaviour:
   m_ObjectHideFlags: 0

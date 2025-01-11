@@ -30,6 +30,7 @@ public class HopperController : BaseEnemy
 
     public void Jump()
     {
+        
         if (!isJumping) return;
         isJumping = false;
         Vector2 jumpVelocity = new Vector2(rb.velocity.x,
