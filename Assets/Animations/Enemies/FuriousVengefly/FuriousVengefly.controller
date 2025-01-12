@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bef77e8f1021074e9f0b48e23824eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 8
+  runSpeed: 4
   attackActiveRange: 8
   shieldActiveRange: 5
   evadeActiveRange: 5
@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bef77e8f1021074e9f0b48e23824eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 8
+  runSpeed: 4
   attackActiveRange: 8
   shieldActiveRange: 5
   evadeActiveRange: 5
@@ -302,10 +302,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: Idle
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8435509434540778503}
   m_Solo: 0

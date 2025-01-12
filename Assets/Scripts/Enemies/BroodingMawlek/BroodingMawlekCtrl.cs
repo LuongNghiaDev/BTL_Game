@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FuriousVengeflyController : MonoBehaviour
+public class BroodingMawlekCtrl : MonoBehaviour
 {
+
     [SerializeField] protected float activeDistance;
 
     [SerializeField] float evadeRange;
@@ -15,7 +16,7 @@ public class FuriousVengeflyController : MonoBehaviour
     [Header("Shoot Section")]
     [SerializeField] Transform shotPoint;
     [SerializeField] GameObject projectile;
-    
+
     private AudioManager audioManager;
 
     protected Transform playerTransform;
@@ -24,8 +25,9 @@ public class FuriousVengeflyController : MonoBehaviour
     protected HealthController healthController;
 
     protected float gravityScale;
+    public bool isGround = true;
 
-    protected bool isFlipped;
+    public bool isFlipped;
     protected bool isSkill;
     protected bool isSleep;
     protected bool isDeath;
@@ -126,22 +128,48 @@ public class FuriousVengeflyController : MonoBehaviour
 
     [SerializeField]
     private GameObject projectile2;
+    private float delay = 0.5f;
+    private float timer = 0f; 
+    private int shotsFired = 0;
+    private int totalShots = 5;
+
+    private void FixedUpdate()
+    {
+        if (!isShooting) return;
+        if (shotsFired >= totalShots)
+            return;
+
+        timer += Time.fixedDeltaTime;
+
+        if (timer >= delay)
+        {
+            DelayShoot();
+            timer = 0f; 
+            shotsFired++; 
+        }
+    }
+
+    private bool isShooting;
+
     public void shootEvent()
     {
-        if(CheckShootBullet2())
+        isShooting = true;
+    }
+
+    private void DelayShoot()
+    {
+        for (int i = 0; i < 10; i++)
         {
-            GameObject instance = (GameObject)Instantiate(projectile2, shotPoint.position, shotPoint.rotation);
-        }
-        else
-        {
-            // create an instance of projectile
             GameObject instance = (GameObject)Instantiate(projectile, shotPoint.position, shotPoint.rotation);
 
-            int direction = isFlipped == true ? 1 : -1;
-            Vector2 velocity = new Vector2(10 * direction, 10);
+            int direction = Random.Range(0, 2) == 0 ? -1 : 1;
+            int forced = Random.Range(10, 30);
+            //int direction = isFlipped == true ? 1 : -1;
+            Vector2 velocity = new Vector2(forced * direction, forced);
 
             instance.GetComponent<Rigidbody2D>().velocity = velocity;
         }
+        isShooting = false;
     }
 
     private bool CheckShootBullet2()
@@ -151,7 +179,8 @@ public class FuriousVengeflyController : MonoBehaviour
         if (distanceX <= 1)
         {
             return true;
-        } else
+        }
+        else
         {
             return false;
         }
@@ -196,4 +225,16 @@ public class FuriousVengeflyController : MonoBehaviour
         return isSkill;
     }
     #endregion
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Grass"))
+        {
+            isGround = true;
+        }
+        if (collision.gameObject.CompareTag("Acid"))
+        {
+            healthController.takeDamage(100);
+        }
+    }
 }

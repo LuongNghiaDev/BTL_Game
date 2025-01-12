@@ -33,8 +33,11 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        audioSource.Play();
-        if(collider.gameObject.tag == "Player")
+        if(audioSource)
+        {
+            audioSource.Play();
+        }
+        if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<Character>().takeDamage(1);
             StartCoroutine(destroyCoroutine(breakSoundInterval));

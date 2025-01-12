@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1577705335398783395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.29, y: 1.21, z: 0}
+  m_LocalPosition: {x: -0.65, y: -0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 2909313191500955913}
   - component: {fileID: 7342067441345191918}
   - component: {fileID: 5330045680803933681}
+  - component: {fileID: 4431161133570255006}
   m_Layer: 13
   m_Name: FuriousVengefly
   m_TagString: Enemy
@@ -303,6 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 15
+  isBoss: 0
+  audioManager: {fileID: 0}
 --- !u!50 &459850750389759241
 Rigidbody2D:
   serializedVersion: 4
@@ -318,7 +321,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -379,6 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   centreGravity: {fileID: 4051572044378636674}
   recoilForce: 5000
+  isBoss: 0
 --- !u!114 &7342067441345191918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +486,23 @@ MonoBehaviour:
   airDeathInterval: 0.2
   landDeathInterval: 1
   shotPoint: {fileID: 6117591553707249044}
-  projectile: {fileID: 0}
+  projectile: {fileID: 3012554070320313231, guid: c1c0df1d30579d24dba003f88a9be3e0, type: 3}
+  projectile2: {fileID: 3953675030208963477, guid: dc07082a4464fd34baa0b69d0cacbabb, type: 3}
+--- !u!111 &4431161133570255006
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6353408105586047310}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6b44af55b3dc56648bb893f0b5e874c4, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6930262288061719203
 GameObject:
   m_ObjectHideFlags: 0
