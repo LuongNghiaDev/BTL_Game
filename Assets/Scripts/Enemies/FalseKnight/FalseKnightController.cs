@@ -61,9 +61,4 @@ public class FalseKnightController : BaseEnemy
             }
         }
     }
-
-    public HealthController getHealthController()
-    {
-        return healthController;
-    }
 }
