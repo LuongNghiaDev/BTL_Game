@@ -18,17 +18,9 @@ public class UISelectMap : UICanvas
     {
         int indexMap = LobbyManager.Ins.GetIndexMap();
 
-        if(indexMap >= 2)
+        for (int i = 0; i < lockMap.Count; i++)
         {
-            lockMap[0].SetActive(false);
-        }
-        if (indexMap >= 3)
-        {
-            lockMap[1].SetActive(false);
-        }
-        if (indexMap >= 4)
-        {
-            lockMap[2].SetActive(false);
+            lockMap[i].SetActive(indexMap < i + 2);
         }
     }
 
