@@ -8,12 +8,13 @@ public class LeapingHuskController : BaseEnemy
     [SerializeField]
     private Rigidbody2D rb;
     private bool isBoss;
+    public HealthController healthCtrl => healthController;
 
-    protected virtual void Start()
+   /* protected virtual void Start()
     {
         healthController = GetComponent<HealthController>();
         isBoss = false;
-    }
+    }*/
 
     private void Awake()
     {
@@ -27,22 +28,22 @@ public class LeapingHuskController : BaseEnemy
         DeathControl();
     }
 
-    public void wake()
+    /*public void wake()
     {
         if (Vector2.Distance(playerTransform.position, transform.position) <= activeDistance && isSleep)
         {
             animator.SetTrigger("Wake");
             isSleep = false;
         }
-    }
+    }*/
 
-    private void OnTriggerEnter2D(Collider2D collider)
+   /* private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<Character>().takeDamage(1);
         }
-    }
+    }*/
 
     //public void DeathControl()
     //{

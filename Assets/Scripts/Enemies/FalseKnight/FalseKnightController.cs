@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class FalseKnightController : BaseEnemy
 {
+    public HealthController healthCtrl => healthController;
     private AudioManager audioManager;
-
+/*
     protected Transform playerTransform;
     protected Rigidbody2D objRigidbody;
     protected Animator animator;
@@ -13,9 +14,9 @@ public class FalseKnightController : BaseEnemy
 
     protected bool isSleep;
     protected bool isDeath;
-    protected bool isBoss;
+    protected bool isBoss;*/
 
-    protected virtual void Start()
+/*    protected virtual void Start()
     {
         animator = GetComponent<Animator>();
         healthController = GetComponent<HealthController>();
@@ -26,7 +27,7 @@ public class FalseKnightController : BaseEnemy
         isSleep = true;
         isBoss = true;
         isDeath = false;
-    }
+    }*/
 
     private void Update()
     {
@@ -34,7 +35,7 @@ public class FalseKnightController : BaseEnemy
         DeathControl();
     }
 
-    public void wake()
+/*    public void wake()
     {
         if (Vector2.Distance(playerTransform.position, transform.position) <= activeDistance && isSleep)
         {
@@ -60,5 +61,5 @@ public class FalseKnightController : BaseEnemy
                 LobbyManager.Ins.OnActiveMainChangeScene?.Invoke();
             }
         }
-    }
+    }*/
 }

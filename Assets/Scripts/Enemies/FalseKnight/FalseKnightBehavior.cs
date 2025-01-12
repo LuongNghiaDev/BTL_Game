@@ -27,12 +27,11 @@ public class FalseKnightBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //Debug.Log(isActive.ToString());
         if (Vector2.Distance(playerTransform.position, false9Transform.position) < attackActiveRange ||
-            (false9Controller.healthController.getMaxHealthPoint() != false9Controller.healthController.getHealthPoint() && isNotAttacked))
+                (false9Controller.healthCtrl.getMaxHealthPoint() != false9Controller.healthCtrl.getHealthPoint() && isNotAttacked))
         {
             //Debug.Log("Attack");
-            if (false9Controller.healthController.getMaxHealthPoint() != false9Controller.healthController.getHealthPoint())
+            if (false9Controller.healthCtrl.getMaxHealthPoint() != false9Controller.healthCtrl.getHealthPoint())
             {
                 isNotAttacked = false;
             }
@@ -57,15 +56,21 @@ public class FalseKnightBehavior : StateMachineBehaviour
                 isFlipped = false;
             }
         }
-        else 
+        else
         {
             if (!isActive)
             {
                 return;
             }
             //Debug.Log("Here");
-            animator.SetTrigger("Run");
-            moveToPlayerPosition();
+            if(false9Controller.healthCtrl.getHealthPoint() == 0)
+            {
+                animator.SetTrigger("Death");
+            } else
+            {
+                animator.SetTrigger("Run");
+                moveToPlayerPosition();
+            }
             //skillControl(animator);
             //shieldControl(animator);
         }

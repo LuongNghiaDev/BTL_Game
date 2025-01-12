@@ -31,36 +31,43 @@ public class LeapingHuskBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(playerTransform.position, LeapingHuskTransform.position) < attackActiveRange)
+        if (leapingHuskController.healthCtrl.getHealthPoint() == 0)
         {
-            animator.SetTrigger("Attack");
-            runSpeed = 10;
-            moveToPlayerPosition();
+            animator.SetTrigger("Death");
         }
         else
         {
-            runSpeed = 5;
-            animator.SetTrigger("Walk");
-            if (canWalk)
+            if (Vector2.Distance(playerTransform.position, LeapingHuskTransform.position) < attackActiveRange)
             {
-                if (isTurnRight)
+                animator.SetTrigger("Attack");
+                runSpeed = 10;
+                moveToPlayerPosition();
+            }
+            else
+            {
+                runSpeed = 5;
+                animator.SetTrigger("Walk");
+                if (canWalk)
                 {
-                    lastWalkTime = Time.time;
-                    walkAround(-1);
-                    isTurnRight = false;
+                    if (isTurnRight)
+                    {
+                        lastWalkTime = Time.time;
+                        walkAround(-1);
+                        isTurnRight = false;
+                    }
+                    else
+                    {
+                        lastWalkTime = Time.time;
+                        walkAround(1);
+                        isTurnRight = true;
+                    }
+                    canWalk = false;
                 }
-                else
-                {
-                    lastWalkTime = Time.time;
-                    walkAround(1);
-                    isTurnRight = true;
-                }
-                canWalk = false;
-            }    
-        }
-        if (Time.time - lastWalkTime >= limitedWalkTime && !canWalk)
-        {
-            canWalk = true;
+            }
+            if (Time.time - lastWalkTime >= limitedWalkTime && !canWalk)
+            {
+                canWalk = true;
+            }
         }
     }
 

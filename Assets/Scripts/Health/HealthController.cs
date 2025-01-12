@@ -23,7 +23,6 @@ public class HealthController : MonoBehaviour
         {
             if (isBoss)
             {
-                audioManager.playSound("Die");
                 LobbyManager.Ins.main.SetActive(true);
             }
         }

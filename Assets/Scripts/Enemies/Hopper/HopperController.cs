@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HopperController : BaseEnemy
 {
-    private HealthController healthController;
+    private HealthController healthCtrl => healthController;
     [SerializeField]
     private bool isJumping = true;
     [SerializeField]
@@ -16,11 +16,11 @@ public class HopperController : BaseEnemy
 
     public bool IsJumping => isJumping;
 
-    protected virtual void Start()
+/*    protected virtual void Start()
     {
         healthController = GetComponent<HealthController>();
         isBoss = false;
-    }
+    }*/
 
     private void Awake()
     {
@@ -34,7 +34,7 @@ public class HopperController : BaseEnemy
         DeathControl();
     }
 
-    public void wake()
+/*    public void wake()
     {
         if (Vector2.Distance(playerTransform.position, transform.position) <= activeDistance && isSleep)
         {
@@ -59,7 +59,7 @@ public class HopperController : BaseEnemy
                 LobbyManager.Ins.OnActiveMainChangeScene?.Invoke();
             }
         }
-    }
+    }*/
 
     public void Jump()
     {
@@ -70,7 +70,7 @@ public class HopperController : BaseEnemy
 
         rb.velocity = jumpVelocity;
     }
-
+/*
     public void lookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
@@ -88,7 +88,7 @@ public class HopperController : BaseEnemy
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
-    }
+    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
