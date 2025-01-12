@@ -11,6 +11,10 @@ public class MawlurkBehaviour : StateMachineBehaviour
     private Rigidbody2D MawlurkRigidbody;
     private MawlurkController mawlurkController;
 
+    private float limitTime = 1.5f;
+    private float lastActiveTime;
+    private bool canAttive = true;
+
     [SerializeField] private float attackActiveRange;
 
 
@@ -27,13 +31,17 @@ public class MawlurkBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(playerTransform.position, MawlurkTransform.position) < attackActiveRange)
+        if (Vector2.Distance(playerTransform.position, MawlurkTransform.position) < attackActiveRange && canAttive)
         {
+            lastActiveTime = Time.time;
+            animator.Play("Active");
+            mawlurkController.shootEvent();
+            canAttive = false;
 
         }
-        else
+        if (!canAttive && Time.time - lastActiveTime > limitTime)
         {
-
+            canAttive = true;
         }
     }
 
