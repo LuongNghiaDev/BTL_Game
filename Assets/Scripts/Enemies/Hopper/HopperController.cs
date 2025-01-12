@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class HopperController : BaseEnemy
 {
-    [Header("Attack")]
-    //[SerializeField] private float attackRange;
+    private HealthController healthCtrl => healthController;
     [SerializeField]
-
     private bool isJumping = true;
     [SerializeField]
     private Rigidbody2D rb;
     [SerializeField]
     private float jumpHeight = 5f;
 
+    protected bool isBoss;
+
     public bool IsJumping => isJumping;
+
+/*    protected virtual void Start()
+    {
+        healthController = GetComponent<HealthController>();
+        isBoss = false;
+    }*/
 
     private void Awake()
     {
@@ -28,9 +34,35 @@ public class HopperController : BaseEnemy
         DeathControl();
     }
 
+/*    public void wake()
+    {
+        if (Vector2.Distance(playerTransform.position, transform.position) <= activeDistance && isSleep)
+        {
+            animator.SetTrigger("Wake");
+            isSleep = false;
+
+            MusicController musicController = FindObjectOfType<MusicController>();
+            StartCoroutine(musicController.fightPrepareCoroutine());
+        }
+    }
+
+    public void DeathControl()
+    {
+        if (healthController.getHealthPoint() <= 0 && !isDeath)
+        {
+            animator.SetTrigger("Death");
+            Debug.Log("Death");
+
+            isDeath = true;
+            if (isBoss)
+            {
+                LobbyManager.Ins.OnActiveMainChangeScene?.Invoke();
+            }
+        }
+    }*/
+
     public void Jump()
     {
-        
         if (!isJumping) return;
         isJumping = false;
         Vector2 jumpVelocity = new Vector2(rb.velocity.x,
@@ -38,7 +70,7 @@ public class HopperController : BaseEnemy
 
         rb.velocity = jumpVelocity;
     }
-
+/*
     public void lookAtPlayer()
     {
         Vector3 flipped = transform.localScale;
@@ -56,7 +88,7 @@ public class HopperController : BaseEnemy
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
-    }
+    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -64,5 +96,10 @@ public class HopperController : BaseEnemy
         {
             isJumping = true;
         }
+    }
+
+    public HealthController getHealthController()
+    {
+        return healthController;
     }
 }

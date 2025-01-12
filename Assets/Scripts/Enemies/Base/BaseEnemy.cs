@@ -100,7 +100,7 @@ public class BaseEnemy : MonoBehaviour
 
     public virtual void OnDie()
     {
-
+        Debug.Log("OnDie");
     }
 
     public void destroyGameObject()

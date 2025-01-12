@@ -12,6 +12,7 @@ public class HopperBehaviour : StateMachineBehaviour
     [SerializeField] private float attackRange = 5;
     [SerializeField] private float runSpeed = 3;
     private bool isActive = false;
+    private bool isNotAttacked = true;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -28,8 +29,13 @@ public class HopperBehaviour : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetTrigger("Jump");
-        if (Vector2.Distance(playerTransform.position, HopperTransform.position) < attackRange && !isActive)
+        if (Vector2.Distance(playerTransform.position, HopperTransform.position) < attackRange && !isActive ||
+            (hopperController.getHealthController().getMaxHealthPoint() != hopperController.getHealthController().getHealthPoint() && isNotAttacked))
         {
+            if (hopperController.getHealthController().getMaxHealthPoint() != hopperController.getHealthController().getHealthPoint())
+            {
+                isNotAttacked = false;
+            }
             isActive = true;
         }
         else
@@ -61,7 +67,6 @@ public class HopperBehaviour : StateMachineBehaviour
     {
         animator.ResetTrigger("Idle");
         animator.ResetTrigger("Jump");
-        animator.ResetTrigger("Death");
         animator.ResetTrigger("Wake");
     }
 
