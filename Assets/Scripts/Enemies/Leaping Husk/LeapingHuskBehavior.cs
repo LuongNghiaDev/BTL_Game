@@ -9,9 +9,6 @@ public class LeapingHuskBehavior : StateMachineBehaviour
     private Transform playerTransform;
     private Rigidbody2D LeapingHuskRigidbody;
     private LeapingHuskController leapingHuskController;
-    [SerializeField] private float attackRange = 5;
-    [SerializeField] private float runSpeed = 3;
-    private bool isActive = false;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -28,23 +25,23 @@ public class LeapingHuskBehavior : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetTrigger("Attack");
-        if (Vector2.Distance(playerTransform.position, LeapingHuskTransform.position) < attackRange && !isActive)
-        {
+        //if (Vector2.Distance(playerTransform.position, LeapingHuskTransform.position) < attackRange && !isActive)
+        //{
 
-        }
-        else
-        {
+        //}
+        //else
+        //{
 
-        }
+        //}
     }
 
     private void moveToPlayerPosition()
     {
-        leapingHuskController.lookAtPlayer();
+        //leapingHuskController.lookAtPlayer();
 
-        Vector2 target = new Vector2(playerTransform.position.x, LeapingHuskTransform.position.y);
-        Vector2 newPosition = Vector2.MoveTowards(LeapingHuskTransform.position, target, runSpeed * Time.fixedDeltaTime);
-        LeapingHuskRigidbody.MovePosition(newPosition);
+        //Vector2 target = new Vector2(playerTransform.position.x, LeapingHuskTransform.position.y);
+        //Vector2 newPosition = Vector2.MoveTowards(LeapingHuskTransform.position, target, runSpeed * Time.fixedDeltaTime);
+        //LeapingHuskRigidbody.MovePosition(newPosition);
     }
 
 

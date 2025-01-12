@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FalseKnightBehavior : StateMachineBehaviour
 {
-    [SerializeField] float attackActiveRange;
+    [SerializeField] private float attackActiveRange = 15;
     [SerializeField] float runSpeed;
 
     private Transform false9Transform;
@@ -12,6 +12,8 @@ public class FalseKnightBehavior : StateMachineBehaviour
     private Rigidbody2D false9Rigidbody;
     private FalseKnightController false9Controller;
     private bool isFlipped = false;
+    private bool isActive = false;
+    private bool isNotAttacked = true;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -25,9 +27,20 @@ public class FalseKnightBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        if (Vector2.Distance(playerTransform.position, false9Transform.position) < attackActiveRange)
+        //Debug.Log(isActive.ToString());
+        if (Vector2.Distance(playerTransform.position, false9Transform.position) < attackActiveRange ||
+            (false9Controller.healthController.getMaxHealthPoint() != false9Controller.healthController.getHealthPoint() && isNotAttacked))
         {
+            //Debug.Log("Attack");
+            if (false9Controller.healthController.getMaxHealthPoint() != false9Controller.healthController.getHealthPoint())
+            {
+                isNotAttacked = false;
+            }
+            if (!isActive)
+            {
+                isActive = true;
+                attackActiveRange = 7;
+            }
             animator.Play("Attack");
             Vector3 flipped = false9Transform.localScale;
             flipped.z *= -1f;
@@ -46,6 +59,11 @@ public class FalseKnightBehavior : StateMachineBehaviour
         }
         else 
         {
+            if (!isActive)
+            {
+                return;
+            }
+            //Debug.Log("Here");
             animator.SetTrigger("Run");
             moveToPlayerPosition();
             //skillControl(animator);
@@ -60,7 +78,6 @@ public class FalseKnightBehavior : StateMachineBehaviour
         animator.ResetTrigger("Death");
         animator.ResetTrigger("Idle");
         animator.ResetTrigger("Run");
-        //animator.ResetTrigger("Turn");
     }
 
     private void moveToPlayerPosition()
@@ -81,26 +98,9 @@ public class FalseKnightBehavior : StateMachineBehaviour
             false9Transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
         }
-        //if (false9Transform.position.x > playerTransform.position.x && !isFlipped)
-        //{
-        //    //transform.localScale = flipped;
-        //    false9Transform.Rotate(0f, 180f, 0f);
-        //    isFlipped = true;
-        //}
-        //else if (false9Transform.position.x < playerTransform.position.x && isFlipped)
-        //{
-        //    //transform.localScale = flipped;
-        //    false9Transform.Rotate(0f, 0f, 0f);
-        //    isFlipped = false;
-        //}
         Vector2 target = new Vector2(playerTransform.position.x, false9Transform.position.y);
         Vector2 newPosition = Vector2.MoveTowards(false9Rigidbody.position, target, runSpeed * Time.fixedDeltaTime);
         false9Rigidbody.MovePosition(newPosition);
     }
 
-
-    private void skillControl(Animator animator)
-    {
-        animator.SetTrigger("Attack");
-    }
 }

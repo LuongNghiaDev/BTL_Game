@@ -34386,14 +34386,14 @@ GameObject:
   - component: {fileID: 1690451068}
   - component: {fileID: 1690451067}
   - component: {fileID: 1690451066}
-  - component: {fileID: 1690451065}
+  - component: {fileID: 1690451075}
   m_Layer: 13
   m_Name: Leaping Husk
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1690451064
 Transform:
   m_ObjectHideFlags: 0
@@ -34410,23 +34410,6 @@ Transform:
   - {fileID: 1892253418}
   m_Father: {fileID: 193476145}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1690451065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690451063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a181590163386248b4d3335aa4c7ab4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeDistance: 0
-  openMusicAttack: 0
-  isJumping: 1
-  rb: {fileID: 0}
-  jumpHeight: 0
 --- !u!111 &1690451066
 Animation:
   m_ObjectHideFlags: 0
@@ -34692,6 +34675,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1690451075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690451063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a02e6d2735aac854ea458cdb400c34f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeDistance: 0
+  openMusicAttack: 0
 --- !u!1 &1725432255
 GameObject:
   m_ObjectHideFlags: 0
@@ -42169,7 +42166,7 @@ Transform:
   m_GameObject: {fileID: 1994924756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 678.4564, y: 276.99835, z: -10}
+  m_LocalPosition: {x: 678.456, y: 277.02405, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42430,7 +42427,7 @@ Transform:
   m_GameObject: {fileID: 2007674105}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0036010742, y: -0.22836304, z: 0}
+  m_LocalPosition: {x: 0.0040283203, y: -0.25405884, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -43638,7 +43635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &8051861578161655834
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -43741,8 +43738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeDistance: 0
   openMusicAttack: 0
-  attackDashRange: 0
-  attackDashVelocity: 0
 --- !u!114 &8305068814019723292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43882,7 +43877,6 @@ GameObject:
   - component: {fileID: 8761724125777489043}
   - component: {fileID: 8761724125777489054}
   - component: {fileID: 8761724125777489055}
-  - component: {fileID: 8761724125777489051}
   - component: {fileID: 8761724125777489049}
   - component: {fileID: 8761724125777489050}
   - component: {fileID: 3260350583123887689}
@@ -44088,26 +44082,6 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
---- !u!114 &8761724125777489051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8761724125777489040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e685258783025241a7871405d7bc246, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeDistance: 3
-  evadeRange: 9000
-  takeDamageForce: 0
-  airDeathInterval: 0.2
-  landDeathInterval: 1
-  shotPoint: {fileID: 0}
-  projectile: {fileID: 778058487976747190, guid: 9a2ae68ea42e24c458bd9eb6a03ba850, type: 3}
-  isBoss: 0
 --- !u!4 &8761724125777489053
 Transform:
   m_ObjectHideFlags: 0
@@ -44138,7 +44112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 15
-  isBoss: 0
+  isBoss: 1
   audioManager: {fileID: 0}
 --- !u!50 &8761724125777489055
 Rigidbody2D:
@@ -44196,8 +44170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeDistance: 5
   openMusicAttack: 0
-  attackDashRange: 0
-  attackDashVelocity: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

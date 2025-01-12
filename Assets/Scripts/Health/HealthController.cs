@@ -38,4 +38,9 @@ public class HealthController : MonoBehaviour
     {
         return healthPoint;
     }
+
+    public int getMaxHealthPoint()
+    {
+        return maxHealthPoint;
+    }
 }

@@ -60,6 +60,9 @@ public class HopperBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Idle");
+        animator.ResetTrigger("Jump");
+        animator.ResetTrigger("Death");
+        animator.ResetTrigger("Wake");
     }
 
 }
