@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 6134739403023131023}
   - component: {fileID: 5718100496811127564}
   m_Layer: 13
-  m_Name: Boss1
+  m_Name: BroodingMawlek(Boss)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
