@@ -19,6 +19,16 @@ public class UISetting : UICanvas
 
     }
 
+    public void OnClose()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void OnBackHome()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     // Start is called before the first frame update
     public override void Show(bool _isShown, bool isHideMain = true)
     {
