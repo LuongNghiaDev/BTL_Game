@@ -11,7 +11,7 @@ public class UISelectMap : UICanvas
 
     private void OnEnable()
     {
-        CheckOpenLockMap();
+        //CheckOpenLockMap();
     }
 
     private void CheckOpenLockMap()

@@ -19,7 +19,7 @@ public class MainChangeScene : MonoBehaviour
 
     private void ActiveObj()
     {
-        //main.SetActive(true);
+        main.SetActive(true);
     }
 
     private void OnDisable()

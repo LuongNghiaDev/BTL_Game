@@ -21,6 +21,12 @@ public class GUIManager : Singleton<GUIManager>
     {
         if(Input.GetKey(KeyCode.M))
         {
+            ActiveUIAllMap(false);
+            ActiveUISetting(true);
+        }
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            ActiveUISetting(false);
             ActiveUIAllMap(true);
         }
     }

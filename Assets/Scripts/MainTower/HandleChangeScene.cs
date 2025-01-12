@@ -10,7 +10,8 @@ public class HandleChangeScene : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            LobbyManager.Ins.SetIndexMap();
+            StartCoroutine(LoadSceneAsync(0));
+            /*LobbyManager.Ins.SetIndexMap();
             if(SceneManager.sceneCountInBuildSettings
                <= LobbyManager.Ins.GetIndexMap())
             {
@@ -18,7 +19,7 @@ public class HandleChangeScene : MonoBehaviour
             } else
             {
                 StartCoroutine(LoadSceneAsync(LobbyManager.Ins.GetIndexMap()));
-            }
+            }*/
         }
     }
 
