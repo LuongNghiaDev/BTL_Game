@@ -13,7 +13,9 @@ public class UIMainLobby : UICanvas
     [SerializeField] private Button btnSetting;
     [SerializeField] private UISetting uISetting;
     [SerializeField] private Button btnInfo;
-    [SerializeField] private UIInfo uIInfo;
+    [SerializeField] private UIInfo uIInfo;    
+    [SerializeField] private Button btnItem;
+    [SerializeField] private ItemDaCo uIItem;
     [SerializeField] private Button btnQuit;
     [SerializeField] private Button btnBack;
     [SerializeField] private UIIntro uIIntro;
@@ -27,30 +29,27 @@ public class UIMainLobby : UICanvas
         btnStart.onClick.AddListener(OnClickBtnStart);
         btnSetting.onClick.AddListener(OnClickBtnSetting);
         btnInfo.onClick.AddListener(OnClickBtnInfo);
+        btnItem.onClick.AddListener(OnClickBtnItem);
         btnQuit.onClick.AddListener(OnClickBtnQuit);
         btnBack.onClick.AddListener(OnClickBtnBack);
         btnBack.gameObject.SetActive(false);
-        if (!PlayerPrefs.HasKey("IntroShown"))
-        {
-            ShowIntro();
-        } 
-        else
-        {
-            uIIntro.Show(false);
-        }
+        ShowIntro();
     }
 
     private void ShowIntro()
     {
-        PlayerPrefs.SetInt("IntroShown", 1);
+        if (PlayerPrefs.HasKey("IntroCucVui"))
+        {
+            return;
+        }
+        uIIntro.Show(true);
+        PlayerPrefs.SetInt("IntroCucVui", 1);
         PlayerPrefs.Save();
     }
 
     private void OnClickBtnStart()
     {
         uiSelectMap.gameObject.SetActive(true);
-        /*uIStartLevel.Show(true);
-        btnBack.gameObject.SetActive(true);*/
     }
 
     private void OnClickBtnSetting()
@@ -65,11 +64,18 @@ public class UIMainLobby : UICanvas
         uIInfo.Show(true);
     }
 
+    private void OnClickBtnItem()
+    {
+        btnBack.gameObject.SetActive(true);
+        uIItem.Show(true);
+    }
+
     private void OnClickBtnBack()
     {
         uiSelectMap.Show(false);
         uISetting.Show(false);
         uIInfo.Show(false);
+        uIItem.Show(false);
         btnBack.gameObject.SetActive(false);
     }
 

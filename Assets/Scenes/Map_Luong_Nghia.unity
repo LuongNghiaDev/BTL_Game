@@ -787,6 +787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  nameOfBoss: 
   isBoss: 0
   audioManager: {fileID: 0}
   defaultDeathSound: {fileID: 0}
@@ -1120,6 +1121,10 @@ PrefabInstance:
     - target: {fileID: 3629297003533894704, guid: ed44212e096f71c4093e70ce5dfe8e1d, type: 3}
       propertyPath: isBoss
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3629297003533894704, guid: ed44212e096f71c4093e70ce5dfe8e1d, type: 3}
+      propertyPath: nameOfBoss
+      value: mapLuongNghia
       objectReference: {fileID: 0}
     - target: {fileID: 3629297003533894704, guid: ed44212e096f71c4093e70ce5dfe8e1d, type: 3}
       propertyPath: audioManager
@@ -18802,7 +18807,7 @@ Transform:
   m_GameObject: {fileID: 682968145}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.511841, y: 0.16290283, z: 0}
+  m_LocalPosition: {x: -13.90863, y: 0.15612793, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39808,7 +39813,7 @@ Transform:
   m_GameObject: {fileID: 1995356597}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 532.3118, y: 267.5371, z: -10}
+  m_LocalPosition: {x: 531.7086, y: 267.54388, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

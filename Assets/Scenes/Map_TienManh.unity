@@ -719,7 +719,7 @@ Transform:
   m_GameObject: {fileID: 47514613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.011230469, y: -1.1221313, z: 0}
+  m_LocalPosition: {x: -0.011169434, y: -1.1250305, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25246,6 +25246,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100392048675121764, guid: 29ad28a6335c7914c809dab3f7a1775e, type: 3}
+      propertyPath: nameOfBoss
+      value: mapTienManh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100392048675121764, guid: 29ad28a6335c7914c809dab3f7a1775e, type: 3}
       propertyPath: maxHealthPoint
       value: 30
       objectReference: {fileID: 0}
@@ -25344,7 +25348,7 @@ Transform:
   m_GameObject: {fileID: 1042710753}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 590.3212, y: 268.82214, z: -10}
+  m_LocalPosition: {x: 590.32117, y: 268.82504, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29495,6 +29499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  nameOfBoss: 
   isBoss: 0
   audioManager: {fileID: 0}
   defaultDeathSound: {fileID: 0}

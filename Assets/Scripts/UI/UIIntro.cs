@@ -86,7 +86,7 @@ public class UIIntro : UICanvas
         {
             currentText = currentText + fullText[i];
             textComponent.text = currentText;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.03f);
         }
     }
 

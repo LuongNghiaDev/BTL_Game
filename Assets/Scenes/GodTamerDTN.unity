@@ -19568,6 +19568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 5
+  nameOfBoss: 
   isBoss: 0
   audioManager: {fileID: 0}
   defaultDeathSound: {fileID: 0}
@@ -26116,6 +26117,10 @@ PrefabInstance:
     - target: {fileID: 2246802158291140840, guid: 159acf0dd8e2865469344b6382cd681b, type: 3}
       propertyPath: m_Name
       value: BroodingMawlek(Boss)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214199121839635513, guid: 159acf0dd8e2865469344b6382cd681b, type: 3}
+      propertyPath: nameOfBoss
+      value: mapTuanNghia
       objectReference: {fileID: 0}
     - target: {fileID: 3214199121839635513, guid: 159acf0dd8e2865469344b6382cd681b, type: 3}
       propertyPath: maxHealthPoint
