@@ -1,10 +1,8 @@
 ﻿using Sirenix.OdinInspector;
 using System.Collections;
-//using System.Runtime.Hosting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-//using static System.Net.Mime.MediaTypeNames;
 
 public class UIMainLobby : UICanvas
 {
@@ -18,6 +16,8 @@ public class UIMainLobby : UICanvas
     [SerializeField] private UIInfo uIInfo;
     [SerializeField] private Button btnQuit;
     [SerializeField] private Button btnBack;
+    [SerializeField] private UIIntro uIIntro;
+
     //[SerializeField] private UIStartLevel uIStartLevel;
 
     public UICanvas[] uiElements; // Mảng chứa các UI cần ẩn
@@ -30,6 +30,20 @@ public class UIMainLobby : UICanvas
         btnQuit.onClick.AddListener(OnClickBtnQuit);
         btnBack.onClick.AddListener(OnClickBtnBack);
         btnBack.gameObject.SetActive(false);
+        if (!PlayerPrefs.HasKey("IntroShown"))
+        {
+            ShowIntro();
+        } 
+        else
+        {
+            uIIntro.Show(false);
+        }
+    }
+
+    private void ShowIntro()
+    {
+        PlayerPrefs.SetInt("IntroShown", 1);
+        PlayerPrefs.Save();
     }
 
     private void OnClickBtnStart()
@@ -38,18 +52,6 @@ public class UIMainLobby : UICanvas
         /*uIStartLevel.Show(true);
         btnBack.gameObject.SetActive(true);*/
     }
-
-/*    IEnumerator LoadSceneAsync(int sceneIndex)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-
-        while (!operation.isDone)
-        {
-            yield return null;
-        }
-
-        gameObject.SetActive(false);
-    }*/
 
     private void OnClickBtnSetting()
     {

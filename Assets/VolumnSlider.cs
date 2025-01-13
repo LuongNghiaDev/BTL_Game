@@ -9,10 +9,8 @@ public class VolumnSlider : MonoBehaviour
 
     void Start()
     {
-        // Đặt giá trị ban đầu của Slider theo giá trị âm lượng hiện tại
+        AudioListener.volume = 1.0f;
         volumeSlider.value = AudioListener.volume;
-
-        // Đăng ký sự kiện để lắng nghe sự thay đổi giá trị của Slider
         volumeSlider.onValueChanged.AddListener(delegate { ChangeVolume(); });
     }
 

@@ -19570,6 +19570,7 @@ MonoBehaviour:
   maxHealthPoint: 5
   isBoss: 0
   audioManager: {fileID: 0}
+  defaultDeathSound: {fileID: 0}
 --- !u!50 &628918882
 Rigidbody2D:
   serializedVersion: 4
@@ -26120,6 +26121,10 @@ PrefabInstance:
       propertyPath: maxHealthPoint
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 3214199121839635513, guid: 159acf0dd8e2865469344b6382cd681b, type: 3}
+      propertyPath: defaultDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 11d540810ba311243a15cc65cbb8a703, type: 3}
     - target: {fileID: 5674039528892889022, guid: 159acf0dd8e2865469344b6382cd681b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.08

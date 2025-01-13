@@ -10,6 +10,8 @@ public class HealthController : MonoBehaviour
     public bool isBoss;
     [SerializeField]
     private AudioManager audioManager;
+    public AudioClip defaultDeathSound;
+    private bool isDeath = true;
 
     private void Start()
     {
@@ -24,6 +26,11 @@ public class HealthController : MonoBehaviour
             if (isBoss)
             {
                 LobbyManager.Ins.main.SetActive(true);
+                if (isDeath)
+                {
+                    AudioSource.PlayClipAtPoint(defaultDeathSound, transform.position);
+                    isDeath = false;
+                }
             }
         }
     }

@@ -33,6 +33,7 @@ public class FalseKnightController : BaseEnemy
     {
         wake();
         DeathControl();
+        
     }
 
 /*    public void wake()

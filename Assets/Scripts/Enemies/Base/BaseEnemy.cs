@@ -36,6 +36,8 @@ public class BaseEnemy : MonoBehaviour
         isDeath = false;
 
         gravityScale = objRigidbody.gravityScale;
+
+        
     }
 
     public void wake()
@@ -95,6 +97,7 @@ public class BaseEnemy : MonoBehaviour
                 musicController.fightEndCoroutine();
             }
             isDeath = true;
+
         }
     }
 
