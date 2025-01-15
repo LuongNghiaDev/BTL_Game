@@ -23,6 +23,7 @@ public class UIMainLobby : UICanvas
     private bool isShowedIntro = false;
     private void Start()
     {
+        PlayerPrefs.SetInt("PlayDauTruong", -1);
         btnStart.onClick.AddListener(OnClickBtnStart);
         btnSetting.onClick.AddListener(OnClickBtnSetting);
         btnInfo.onClick.AddListener(OnClickBtnInfo);

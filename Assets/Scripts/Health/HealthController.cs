@@ -12,11 +12,19 @@ public class HealthController : MonoBehaviour
     [SerializeField]
     private AudioManager audioManager;
     public AudioClip defaultDeathSound;
+    // [SerializeField] private GameObject startPoint1;
+    // [SerializeField] private GameObject startPoint2;
+    // [SerializeField] private GameObject startPoint3;
+    // [SerializeField] private GameObject startPoint4;
+    // [SerializeField] private GameObject startPoint5;
+    // [SerializeField] private GameObject startPoint6;
+    [SerializeField] private GameObject[] startPoints;
     private bool isDeath = true;
 
     private void Start()
     {
         healthPoint = maxHealthPoint;
+        // startPoints = new GameObject[] { startPoint1, startPoint2, startPoint3, startPoint4, startPoint5, startPoint6 };
     }
 
     public void takeDamage(int damage)
@@ -34,6 +42,18 @@ public class HealthController : MonoBehaviour
                     AudioSource.PlayClipAtPoint(defaultDeathSound, transform.position);
                     isDeath = false;
                 }
+            }
+            if (PlayerPrefs.GetInt("PlayDauTruong") == 1)
+            {
+                if (PlayerPrefs.GetInt(gameObject.name) == 1)
+                {
+                    return;
+                }
+                int randomIndex = Random.Range(0, startPoints.Length);
+                Transform spawnPoint = startPoints[randomIndex].transform;
+                Instantiate(gameObject, spawnPoint.position, spawnPoint.rotation);
+                PlayerPrefs.SetInt(gameObject.name, 1);
+                PlayerPrefs.Save();
             }
         }
     }

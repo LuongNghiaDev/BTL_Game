@@ -122,6 +122,12 @@ public partial class Character : IHeal
 
     private IEnumerator dieCoroutine()
     {
+        if (PlayerPrefs.GetInt("PlayDauTruong") == 1)
+        {
+            PlayerPrefs.SetInt("CurrentScore", 0);
+            PlayerPrefs.Save();
+        }
+
         freezeGravity();
         isDeath = true;
         audioManager.playSound("DeathYell");

@@ -37,7 +37,7 @@ public class BaseEnemy : MonoBehaviour
 
         gravityScale = objRigidbody.gravityScale;
 
-        
+
     }
 
     public void wake()
@@ -47,7 +47,7 @@ public class BaseEnemy : MonoBehaviour
             animator.SetTrigger("Wake");
             isSleep = false;
 
-            if(openMusicAttack == true)
+            if (openMusicAttack == true)
             {
                 MusicController musicController = FindObjectOfType<MusicController>();
                 StartCoroutine(musicController.fightPrepareCoroutine());
@@ -103,7 +103,22 @@ public class BaseEnemy : MonoBehaviour
 
     public virtual void OnDie()
     {
-        Debug.Log("OnDie");
+        if (PlayerPrefs.GetInt("PlayDauTruong") != 1) {
+            return;
+        }
+        bool isBoss = healthController.isBoss;
+        int getCurrentScore = PlayerPrefs.GetInt("CurrentScore");
+        if (isBoss)
+        {
+            PlayerPrefs.SetInt("CurrentScore", getCurrentScore + 10);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("CurrentScore", getCurrentScore + 4);
+        }
+        string name = gameObject.name;
+        PlayerPrefs.SetInt(name, -1);
+        PlayerPrefs.Save();
     }
 
     public void destroyGameObject()
