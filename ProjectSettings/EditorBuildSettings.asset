@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map_Luong_Nghia.unity
     guid: 1ceb8271858a89447a45e924642aa51f
+  - enabled: 1
+    path: Assets/Scenes/Map_DauTruong.unity
+    guid: ac499fe756d0ace4d8f6e95d9535cedb
   m_configObjects: {}
