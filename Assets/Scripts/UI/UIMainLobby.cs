@@ -19,11 +19,8 @@ public class UIMainLobby : UICanvas
     [SerializeField] private Button btnQuit;
     [SerializeField] private Button btnBack;
     [SerializeField] private UIIntro uIIntro;
-
-    //[SerializeField] private UIStartLevel uIStartLevel;
-
-    public UICanvas[] uiElements; // Mảng chứa các UI cần ẩn
-
+    [SerializeField] private GameObject[] subUIs;
+    private bool isShowedIntro = false;
     private void Start()
     {
         btnStart.onClick.AddListener(OnClickBtnStart);
@@ -33,7 +30,35 @@ public class UIMainLobby : UICanvas
         btnQuit.onClick.AddListener(OnClickBtnQuit);
         btnBack.onClick.AddListener(OnClickBtnBack);
         btnBack.gameObject.SetActive(false);
-        ShowIntro();
+        if (!isShowedIntro)
+        {
+            ShowIntro();
+            isShowedIntro = true;
+        }
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnClickBtnBack();
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                GameObject hitObject = hit.collider.gameObject;
+                foreach (GameObject menu in subUIs)
+                {
+                    if (hitObject != menu)
+                    {
+                        menu.SetActive(false);
+                        btnBack.gameObject.SetActive(false);
+                    }
+                }
+            }
+        }
     }
 
     private void ShowIntro()
@@ -72,6 +97,7 @@ public class UIMainLobby : UICanvas
 
     private void OnClickBtnBack()
     {
+        Debug.Log("Back");
         uiSelectMap.Show(false);
         uISetting.Show(false);
         uIInfo.Show(false);

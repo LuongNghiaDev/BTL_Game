@@ -6,28 +6,6 @@ public class FalseKnightController : BaseEnemy
 {
     public HealthController healthCtrl => healthController;
     private AudioManager audioManager;
-/*
-    protected Transform playerTransform;
-    protected Rigidbody2D objRigidbody;
-    protected Animator animator;
-    public HealthController healthController;
-
-    protected bool isSleep;
-    protected bool isDeath;
-    protected bool isBoss;*/
-
-/*    protected virtual void Start()
-    {
-        animator = GetComponent<Animator>();
-        healthController = GetComponent<HealthController>();
-        objRigidbody = GetComponent<Rigidbody2D>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        audioManager = GetComponent<AudioManager>();
-
-        isSleep = true;
-        isBoss = true;
-        isDeath = false;
-    }*/
 
     private void Update()
     {

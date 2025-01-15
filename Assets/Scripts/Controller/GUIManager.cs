@@ -5,17 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GUIManager : Singleton<GUIManager>
 {
-
-    [SerializeField]
-    private GameObject UISetting;
-    [SerializeField]
-    private GameObject UIAllMap;
-    [SerializeField]
-    private GameObject UiMainLobby;
-    [SerializeField]
-    private GameObject UiGamePlay;
-    [SerializeField]
-    private GameObject uiHome;
+    [SerializeField] private GameObject UISetting;
+    [SerializeField] private GameObject UIAllMap;
+    [SerializeField] private GameObject UiMainLobby;
+    [SerializeField] private GameObject UiGamePlay;
+    [SerializeField] private GameObject uiHome;
 
     private void Update()
     {

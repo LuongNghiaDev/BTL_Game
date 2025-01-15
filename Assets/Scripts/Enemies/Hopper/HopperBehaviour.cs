@@ -14,12 +14,9 @@ public class HopperBehaviour : StateMachineBehaviour
     private bool isActive = false;
     private bool isNotAttacked = true;
 
-
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-
         HopperTransform = animator.GetComponent<Transform>();
         HopperRigidbody = animator.GetComponent<Rigidbody2D>();
         hopperController = animator.GetComponent<HopperController>();
@@ -45,7 +42,7 @@ public class HopperBehaviour : StateMachineBehaviour
                 return;
             }
             hopperController.Jump();
-            if (!hopperController.IsJumping)
+            if (!hopperController.IsJumping())
             {
                 moveToPlayerPosition();
             }
@@ -61,8 +58,6 @@ public class HopperBehaviour : StateMachineBehaviour
         HopperRigidbody.MovePosition(newPosition);
     }
 
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Idle");

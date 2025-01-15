@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class LeapingHuskBehavior : StateMachineBehaviour
 {
-    // Start is called before the first frame update
     private Transform LeapingHuskTransform;
     private Transform playerTransform;
     private Rigidbody2D LeapingHuskRigidbody;
     private LeapingHuskController leapingHuskController;
 
-    [SerializeField] float runSpeed = 5;
+    private float runSpeed = 20;
     [SerializeField] private float attackActiveRange = 15;
     private bool isTurnRight = false;
     private float lastWalkTime;
     private float limitedWalkTime = 3f;
     private bool canWalk = true;
 
-
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -28,7 +25,6 @@ public class LeapingHuskBehavior : StateMachineBehaviour
         leapingHuskController = animator.GetComponent<LeapingHuskController>();
     }
 
-    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (leapingHuskController.healthCtrl.getHealthPoint() == 0)
@@ -37,28 +33,30 @@ public class LeapingHuskBehavior : StateMachineBehaviour
         }
         else
         {
-            if (Vector2.Distance(playerTransform.position, LeapingHuskTransform.position) < attackActiveRange)
+            int percentHealth = leapingHuskController.healthCtrl.getHealthPercent();
+            if (Vector2.Distance(playerTransform.position, LeapingHuskTransform.position) < attackActiveRange 
+            || percentHealth < 50)
             {
                 animator.SetTrigger("Attack");
-                runSpeed = 10;
+                runSpeed = 10 + (100 - percentHealth) * 0.2f;
                 moveToPlayerPosition();
             }
             else
             {
-                runSpeed = 5;
+                runSpeed = 15;
                 animator.SetTrigger("Walk");
                 if (canWalk)
                 {
                     if (isTurnRight)
                     {
                         lastWalkTime = Time.time;
-                        walkAround(-1);
+                        walkAround(1);
                         isTurnRight = false;
                     }
                     else
                     {
                         lastWalkTime = Time.time;
-                        walkAround(1);
+                        walkAround(-1);
                         isTurnRight = true;
                     }
                     canWalk = false;
@@ -74,7 +72,6 @@ public class LeapingHuskBehavior : StateMachineBehaviour
     private void moveToPlayerPosition()
     {
         leapingHuskController.lookAtPlayer();
-
         Vector2 target = new Vector2(playerTransform.position.x, LeapingHuskTransform.position.y);
         Vector2 newPosition = Vector2.MoveTowards(LeapingHuskTransform.position, target, runSpeed * Time.fixedDeltaTime);
         LeapingHuskRigidbody.MovePosition(newPosition);
@@ -82,9 +79,14 @@ public class LeapingHuskBehavior : StateMachineBehaviour
 
     private void walkAround(int side)
     {
-        Vector2 target = new Vector2(LeapingHuskTransform.position.x + 10 * side, LeapingHuskTransform.position.y);
-        Vector2 newPosition = Vector2.Lerp(LeapingHuskTransform.position, target, 1);
-        LeapingHuskRigidbody.MovePosition(newPosition);
+        Vector2 moveVelocity = new Vector2(runSpeed * side, LeapingHuskRigidbody.velocity.y);
+        LeapingHuskRigidbody.velocity = moveVelocity;
+        // Vector2 moveVelocity = new Vector2(LeapingHuskRigidbody.velocity.x * side,
+        //                         Mathf.Sqrt(1 * (-2) * (Physics2D.gravity.y * LeapingHuskRigidbody.gravityScale)));
+        // LeapingHuskRigidbody.velocity = moveVelocity;
+        // Vector2 target = new Vector2(LeapingHuskTransform.position.x + 8 * side, LeapingHuskTransform.position.y);
+        // Vector2 newPosition = Vector2.Lerp(LeapingHuskTransform.position, target, 1);
+        // LeapingHuskRigidbody.MovePosition(newPosition);
     }
 
 

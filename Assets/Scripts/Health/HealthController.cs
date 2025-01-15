@@ -26,7 +26,6 @@ public class HealthController : MonoBehaviour
         {
             if (isBoss)
             {
-                // GetComponent<ItemDisplay>().ShowObtainedItem(itemSprite, Camera.main);
                 openGate();
                 PlayerPrefs.SetInt(nameOfBoss, 1);
                 PlayerPrefs.Save();
@@ -38,32 +37,6 @@ public class HealthController : MonoBehaviour
             }
         }
     }
-
-//  public void ShowObtainedItem(Sprite itemSprite, Camera camera)
-//     {
-//         itemImage.sprite = itemSprite;
-//         StartCoroutine(ShowAndHideItem(camera));
-//     }
-
-//     public void HideObtainedItem()
-//     {
-//         gameObject.SetActive(false);
-//     }
-
-//     private IEnumerator ShowAndHideItem(Camera camera)
-//     {
-//         gameObject.SetActive(true); // Hiển thị vật phẩm
-
-//         // Lấy vị trí của Camera trong không gian thế giới
-//         Vector3 screenPos = camera.WorldToScreenPoint(transform.position);
-
-//         // Đặt vị trí của vật phẩm trên màn hình Camera
-//         transform.position = screenPos;
-
-//         yield return new WaitForSeconds(5f); // Chờ trong 5 giây
-
-//         gameObject.SetActive(false); // Ẩn vật phẩm
-//     }
 
     private void openGate()
     {
@@ -83,5 +56,9 @@ public class HealthController : MonoBehaviour
     public int getMaxHealthPoint()
     {
         return maxHealthPoint;
+    }
+    public int getHealthPercent()
+    {
+        return healthPoint * 100 / maxHealthPoint;
     }
 }

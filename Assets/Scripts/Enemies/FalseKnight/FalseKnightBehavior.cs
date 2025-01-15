@@ -6,7 +6,6 @@ public class FalseKnightBehavior : StateMachineBehaviour
 {
     [SerializeField] private float attackActiveRange = 15;
     [SerializeField] float runSpeed;
-
     private Transform false9Transform;
     private Transform playerTransform;
     private Rigidbody2D false9Rigidbody;
@@ -107,5 +106,4 @@ public class FalseKnightBehavior : StateMachineBehaviour
         Vector2 newPosition = Vector2.MoveTowards(false9Rigidbody.position, target, runSpeed * Time.fixedDeltaTime);
         false9Rigidbody.MovePosition(newPosition);
     }
-
 }

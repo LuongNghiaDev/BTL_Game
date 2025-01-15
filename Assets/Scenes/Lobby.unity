@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 120110553}
   - component: {fileID: 120110552}
   - component: {fileID: 120110554}
+  - component: {fileID: 120110555}
   m_Layer: 5
   m_Name: UISetting
   m_TagString: Untagged
@@ -521,6 +522,51 @@ MonoBehaviour:
   isDisableWhenClosed: 1
   isAutoSetSortingLayer: 1
   btnShowFPS: {fileID: 1200366812}
+--- !u!61 &120110555
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120110549}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.3251038, y: 3.2798462}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1602.4109, y: 906.24817}
+  m_EdgeRadius: 0
 --- !u!1 &134791886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1060,7 +1106,7 @@ GameObject:
   - component: {fileID: 282730637}
   - component: {fileID: 282730636}
   m_Layer: 5
-  m_Name: txtInfo
+  m_Name: btnInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1509,7 +1555,7 @@ MonoBehaviour:
   btnQuit: {fileID: 1959131047}
   btnBack: {fileID: 1017016802}
   uIIntro: {fileID: 978582674}
-  uiElements: []
+  subUIs: []
 --- !u!1 &455186935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,7 +1569,7 @@ GameObject:
   - component: {fileID: 455186938}
   - component: {fileID: 455186937}
   m_Layer: 5
-  m_Name: txtItem
+  m_Name: btnItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1747,7 +1793,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: -17}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &581025988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,7 +1837,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1313431235}
   m_HandleRect: {fileID: 1313431234}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2872,7 +2918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000013086853}
+  m_AnchoredPosition: {x: 0, y: -0.00012180599}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &894176910
@@ -3112,6 +3158,7 @@ GameObject:
   - component: {fileID: 978582676}
   - component: {fileID: 978582675}
   - component: {fileID: 978582674}
+  - component: {fileID: 978582677}
   m_Layer: 5
   m_Name: UIIntro
   m_TagString: Untagged
@@ -3200,6 +3247,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978582672}
   m_CullTransparentMesh: 1
+--- !u!61 &978582677
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978582672}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.3251038, y: 3.2798462}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1602.4109, y: 906.24817}
+  m_EdgeRadius: 0
 --- !u!1 &1017016800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3213,7 +3305,7 @@ GameObject:
   - component: {fileID: 1017016803}
   - component: {fileID: 1017016802}
   m_Layer: 5
-  m_Name: txtBack
+  m_Name: btnBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3235,9 +3327,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -854, y: -511}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.38, y: 11.74}
+  m_SizeDelta: {x: 2496.5, y: 1180.13}
+  m_Pivot: {x: 0.5, y: 0.5000001}
 --- !u!114 &1017016802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4144,6 +4236,7 @@ GameObject:
   - component: {fileID: 1178693374}
   - component: {fileID: 1178693373}
   - component: {fileID: 1178693372}
+  - component: {fileID: 1178693375}
   m_Layer: 5
   m_Name: UIItem
   m_TagString: Untagged
@@ -4203,8 +4296,8 @@ MonoBehaviour:
   btnLuoiKiem: {fileID: 909160708}
   btnDCCK: {fileID: 734711951}
   btnDungCuRen: {fileID: 1652221563}
-  imgChuoiKiem: {fileID: 1566741354}
-  imgLuoiKiem: {fileID: 2017246055}
+  imgChuoiKiem: {fileID: 2017246055}
+  imgLuoiKiem: {fileID: 1566741354}
   imgDCCK: {fileID: 589285330}
   imgDungCuRen: {fileID: 629956132}
   endSound: {fileID: 8300000, guid: a94c85a011f8aa04bb6516236ce25d24, type: 3}
@@ -4247,6 +4340,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178693370}
   m_CullTransparentMesh: 1
+--- !u!61 &1178693375
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178693370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.3251038, y: 3.2798462}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1602.4109, y: 906.24817}
+  m_EdgeRadius: 0
 --- !u!1 &1200366810
 GameObject:
   m_ObjectHideFlags: 0
@@ -5282,7 +5420,7 @@ GameObject:
   - component: {fileID: 1546207296}
   - component: {fileID: 1546207298}
   m_Layer: 5
-  m_Name: txtStart
+  m_Name: btnStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5405,7 +5543,7 @@ GameObject:
   - component: {fileID: 1566741355}
   - component: {fileID: 1566741354}
   m_Layer: 5
-  m_Name: ChuoiKiem
+  m_Name: LuoiKiem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5555,6 +5693,7 @@ GameObject:
   - component: {fileID: 1595640277}
   - component: {fileID: 1595640276}
   - component: {fileID: 1595640278}
+  - component: {fileID: 1595640279}
   m_Layer: 5
   m_Name: UIInfo
   m_TagString: Untagged
@@ -5639,6 +5778,51 @@ MonoBehaviour:
   isDisableWhenClosed: 1
   isAutoSetSortingLayer: 1
   btnOpenGit: {fileID: 1172425971}
+--- !u!61 &1595640279
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595640273}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.3251038, y: 3.2798462}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1602.4109, y: 906.24817}
+  m_EdgeRadius: 0
 --- !u!1 &1652221561
 GameObject:
   m_ObjectHideFlags: 0
@@ -11282,7 +11466,7 @@ GameObject:
   - component: {fileID: 1861029055}
   - component: {fileID: 1861029054}
   m_Layer: 5
-  m_Name: txtSetting
+  m_Name: btnSetting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11912,7 +12096,7 @@ GameObject:
   - component: {fileID: 1959131048}
   - component: {fileID: 1959131047}
   m_Layer: 5
-  m_Name: txtQuit
+  m_Name: btnQuit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12235,7 +12419,7 @@ GameObject:
   - component: {fileID: 2017246056}
   - component: {fileID: 2017246055}
   m_Layer: 5
-  m_Name: LuoiKiem
+  m_Name: ChuoiKiem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

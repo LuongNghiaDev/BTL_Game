@@ -14,14 +14,6 @@ public class DanCuaMawlurk : MonoBehaviour
     private Rigidbody2D projectitleRigidbody;
     private AudioSource audioSource;
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Grass") || collision.gameObject.CompareTag("Player"))
-    //    {
-    //        spriteRenderer.sprite = newSprite;
-    //    }
-    //}
-
     private void Awake()
     {
         projectitleRigidbody = GetComponent<Rigidbody2D>();
@@ -35,13 +27,11 @@ public class DanCuaMawlurk : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-
     private IEnumerator destroyCoroutine(float interval)
     {
         yield return new WaitForSeconds(interval);
         Destroy(gameObject);
     }
-
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -49,13 +39,11 @@ public class DanCuaMawlurk : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<Character>().takeDamage(1);
-            //StartCoroutine(destroyCoroutine(breakSoundInterval));
         }
         else if (collider.gameObject.tag == "Grass")
         {
             projectitleRigidbody.gravityScale = 0;
             projectitleRigidbody.velocity = Vector2.zero;
-            //StartCoroutine(destroyCoroutine(breakSoundInterval));
             spriteRenderer.sprite = newSprite;
         }
     }

@@ -31,13 +31,12 @@ public class MawlurkBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Vector2.Distance(playerTransform.position, MawlurkTransform.position) < attackActiveRange && canAttive)
+        if (Mathf.Abs(playerTransform.position.x - MawlurkTransform.position.x) < attackActiveRange && canAttive)
         {
             lastActiveTime = Time.time;
             animator.Play("Active");
             mawlurkController.shootEvent();
             canAttive = false;
-
         }
         if (!canAttive && Time.time - lastActiveTime > limitTime)
         {
