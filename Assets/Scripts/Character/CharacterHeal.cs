@@ -127,7 +127,6 @@ public partial class Character : IHeal
             PlayerPrefs.SetInt("CurrentScore", 0);
             PlayerPrefs.Save();
         }
-
         freezeGravity();
         isDeath = true;
         audioManager.playSound("DeathYell");

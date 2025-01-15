@@ -45,7 +45,7 @@ public class HealthController : MonoBehaviour
             }
             if (PlayerPrefs.GetInt("PlayDauTruong") == 1)
             {
-                if (PlayerPrefs.GetInt(gameObject.name) == 1)
+                if (PlayerPrefs.GetInt(gameObject.name) == 1 || gameObject.name == "Player")
                 {
                     return;
                 }

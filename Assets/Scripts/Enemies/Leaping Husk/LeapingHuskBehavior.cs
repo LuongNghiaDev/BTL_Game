@@ -81,16 +81,7 @@ public class LeapingHuskBehavior : StateMachineBehaviour
     {
         Vector2 moveVelocity = new Vector2(runSpeed * side, LeapingHuskRigidbody.velocity.y);
         LeapingHuskRigidbody.velocity = moveVelocity;
-        // Vector2 moveVelocity = new Vector2(LeapingHuskRigidbody.velocity.x * side,
-        //                         Mathf.Sqrt(1 * (-2) * (Physics2D.gravity.y * LeapingHuskRigidbody.gravityScale)));
-        // LeapingHuskRigidbody.velocity = moveVelocity;
-        // Vector2 target = new Vector2(LeapingHuskTransform.position.x + 8 * side, LeapingHuskTransform.position.y);
-        // Vector2 newPosition = Vector2.Lerp(LeapingHuskTransform.position, target, 1);
-        // LeapingHuskRigidbody.MovePosition(newPosition);
     }
-
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.ResetTrigger("Idle");
